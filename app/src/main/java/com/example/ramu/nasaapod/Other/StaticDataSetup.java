@@ -50,7 +50,6 @@ public class StaticDataSetup {
                 "http://www.jpl.nasa.gov/images/spitzer/20160107/PIA20063-16.jpg"};
 
 
-
     String[] copyright={"@ nasa.gov","@ nasa.gov","@ nasa.gov","@ nasa.gov","@ nasa.gov"};
 
 

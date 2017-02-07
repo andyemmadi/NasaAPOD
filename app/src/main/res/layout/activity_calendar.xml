@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/activity_calendar"
@@ -9,24 +9,27 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#000000"
+    android:background="#ffffff"
     tools:context="com.example.ramu.nasaapod.main.CalendarActivity">
 
 
-    <TextView
-        android:text="Selected Date: "
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/cal_tv" />
+    <!--<TextView-->
+        <!--android:text="Selected Date: "-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:id="@+id/cal_tv" />-->
 
     <!--<DatePicker-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:datePickerMode="calendar"-->
-        <!--android:id="@+id/datePicker3" />-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/date_Picker"-->
+        <!--android:minDate="24/01/2017"-->
+        <!--android:layout_weight="1" />-->
+
 
     <!---->
     <!--<CalendarView-->
@@ -37,4 +40,4 @@
         <!--android:layout_alignParentStart="true"-->
         <!--android:id="@+id/calendarView" />-->
 
-</LinearLayout>
+</RelativeLayout>

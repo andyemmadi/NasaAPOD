@@ -16,7 +16,7 @@ import com.example.ramu.nasaapod.R;
 
 import java.util.Calendar;
 
- public class CalendarActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
+ public class CalendarActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
 
      CalendarView calendarView;
@@ -34,13 +34,15 @@ import java.util.Calendar;
         int min_month = getIntent().getIntExtra("month",0);
         int min_day = getIntent().getIntExtra("day",1);
 
+
+        //datePicker = (DatePicker) findViewById(R.id.date_Picker);
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
         int month = c.get(Calendar.MONTH);
         int day = c.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this,this,year,month,day);
 
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this,this,year,month,day);
 
         c.set(year,month,day);
         datePickerDialog.getDatePicker().setMaxDate(c.getTimeInMillis());
@@ -60,6 +62,28 @@ import java.util.Calendar;
 
     }
 
+     /*
+     @Override
+     public void onDateChanged(DatePicker view, int year, int month, int day) {
+         String finalyear = String.valueOf(year);
+         month++;
+         String finalmonth = String.valueOf(month);
+         String finalday = String.valueOf(day);
+
+         if(day<10){
+             finalday = "0"+finalday;
+         }
+
+         String finaldate;
+         if(month<9) {
+             finaldate = finalyear + "-0" + finalmonth + "-" + finalday;
+         }else
+         {
+             finaldate = finalyear + "-" + finalmonth + "-" + finalday;
+         }
+         backToPrevActivity(finaldate);
+     }*/
+
 
 
      @Override
@@ -69,6 +93,11 @@ import java.util.Calendar;
          String t_month = String.valueOf(month);
          String t_day = String.valueOf(dayOfMonth);
 
+
+
+         if(dayOfMonth<10){
+             t_day = "0"+t_day;
+         }
 
          String date_str=null;
          if(month<10) {
@@ -83,6 +112,36 @@ import java.util.Calendar;
          // textView.setText(t_month+" - "+t_day+" - "+t_year);
         backToPrevActivity(date_str);
      }
+
+//
+//
+
+
+     /*
+
+     private class MyOnDateChangeListener implements DatePicker.OnDateChangedListener {
+         @Override
+         public void onDateChanged(DatePicker view, int year, int month, int day) {
+             String finalyear = String.valueOf(year);
+             month++;
+             String finalmonth = String.valueOf(month);
+             String finalday = String.valueOf(day);
+
+             if(day<10){
+                 finalday = "0"+finalday;
+             }
+
+             String finaldate;
+             if(month<9) {
+                 finaldate = finalyear + "-0" + finalmonth + "-" + finalday;
+             }else
+             {
+                 finaldate = finalyear + "-" + finalmonth + "-" + finalday;
+             }
+             backToPrevActivity(finaldate);
+         }
+     }*/
+
 
      public void backToPrevActivity(String date_str){
 

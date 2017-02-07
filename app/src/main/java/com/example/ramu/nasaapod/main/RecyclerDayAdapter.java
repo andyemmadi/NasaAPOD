@@ -90,7 +90,7 @@ public class RecyclerDayAdapter extends RecyclerView.Adapter<RecyclerDayAdapter.
                 .load(single_day.getUrl())
                 .centerCrop()
                 .placeholder(R.mipmap.ic_launcher)
-                .error(R.drawable.dangerous_woman)
+                .error(R.drawable.nasalogo)
                 .into(holder.picutreOfDay);
     }
 

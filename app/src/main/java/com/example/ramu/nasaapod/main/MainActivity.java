@@ -3,6 +3,7 @@ package com.example.ramu.nasaapod.main;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -235,7 +236,9 @@ public class MainActivity extends AppCompatActivity{
           //  switchEmptyView(false);
             String date = data.getStringExtra("date");
             Log.e("onActivityREsult",date);
-            Snackbar snackbar = Snackbar.make(relativelayout, "Date.."+data.getStringExtra("date"), Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(relativelayout, "Date : "+data.getStringExtra("date"), Snackbar.LENGTH_LONG);
+            View snackView = snackbar.getView();
+            snackView.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
             snackbar.show();
             if(!date.equals("No date selected"))
             {
