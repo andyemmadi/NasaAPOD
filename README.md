@@ -1,7 +1,5 @@
 # NasaAPOD
-NasaAPOD Application
-Nasa
-This is Application, fetch only one new Image(including data) from NasaAPI for a per day. 
+NasaAPOD Application, fetch only one new Image(including data) from NasaAPI for a per day. 
 Nasa.gov release a picture for per day.
 
 This API link used for fetching the data.
