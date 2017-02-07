@@ -6,7 +6,7 @@ This API link used for fetching the data.
 https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 
-Following android 
+Following concepts used for building application:
  - Used RecyclerView for displaying list items
  - Used CardView for showing elevation and shadow of recycler items
  - Used Retrofit REST API
